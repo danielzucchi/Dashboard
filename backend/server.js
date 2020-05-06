@@ -8,6 +8,7 @@ server.use(bodyParser.json());
 server.use(dataRoutes);
 
 const pool = mariadb.createPool({
+  host: "localhost",
   user: "root",
   connectionLimit: 5,
 });
