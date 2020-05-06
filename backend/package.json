@@ -1,0 +1,28 @@
+{
+  "name": "dashboard",
+  "version": "1.0.0",
+  "description": "Nectar dashboard assignment",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielzucchi/Dashboard.git"
+  },
+  "author": "Daniel Zucchi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danielzucchi/Dashboard/issues"
+  },
+  "homepage": "https://github.com/danielzucchi/Dashboard#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mariadb": "^2.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}
