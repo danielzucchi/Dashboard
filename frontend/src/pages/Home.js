@@ -5,7 +5,8 @@ import { NavLink } from 'react-router-dom';
 const Home = () => {
   return (
     <div>
-      <h1>Home</h1>
+      <h1>Dashboard Home</h1>
+      <h3>Visualise data:</h3>
       <Button style={{ margin: '10px' }} variant="contained" color="primary">
         <NavLink to="/weekly" style={{ color: 'white' }}>
           Weekly Data

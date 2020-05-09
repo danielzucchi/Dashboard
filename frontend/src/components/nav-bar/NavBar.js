@@ -53,6 +53,9 @@ export default function DenseAppBar() {
               onClose={handleClose}
             >
               <MenuItem onClick={handleClose}>
+                <NavLink to="/">Home</NavLink>
+              </MenuItem>
+              <MenuItem onClick={handleClose}>
                 <NavLink to="/weekly">Weekly</NavLink>
               </MenuItem>
               <MenuItem onClick={handleClose}>
@@ -62,7 +65,7 @@ export default function DenseAppBar() {
           </IconButton>
           <Typography variant="h6" color="inherit">
             <NavLink to="/" style={{ color: 'white' }}>
-              Home
+              Dashboard
             </NavLink>
           </Typography>
         </Toolbar>

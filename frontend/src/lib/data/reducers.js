@@ -8,25 +8,14 @@ const dataReducer = (state = initialState, action) => {
   const newState = { ...state };
 
   switch (action.type) {
-    case actionTypes.GET_WEEKLY_DATA:
+    case actionTypes.GET_DATA:
       newState.isLoading = true;
 
       return newState;
 
-    case actionTypes.SET_WEEKLY_DATA:
+    case actionTypes.SET_DATA:
       newState.isLoading = false;
-      newState.weeklyData = action.data;
-
-      return newState;
-
-    case actionTypes.GET_TOP_DATA:
-      newState.isLoading = true;
-
-      return newState;
-
-    case actionTypes.SET_TOP_DATA:
-      newState.isLoading = false;
-      newState.topData = action.data;
+      newState.data = action.data;
 
       return newState;
 
