@@ -1,16 +1,25 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import Loading from '../components/loading/Loading';
+import TopDataContainer from '../components/top-data/TopDataContainer';
 import fetchData from '../lib/data/fetchData';
 
 const Top = ({ dispatch, data }) => {
-  const { isLoading } = data;
+  const { top } = data;
 
   useEffect(() => {
-    dispatch(fetchData('top'));
-  }, [dispatch]);
+    if (!top) {
+      dispatch(fetchData('top'));
+    }
 
-  return isLoading ? <Loading /> : <h1>Top here</h1>;
+    return;
+  }, [dispatch, top]);
+
+  return (
+    <div>
+      <h1>Top Data</h1>
+      <TopDataContainer />
+    </div>
+  );
 };
 
 export default connect(state => state)(Top);

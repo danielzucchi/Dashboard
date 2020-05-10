@@ -13,9 +13,15 @@ const dataReducer = (state = initialState, action) => {
 
       return newState;
 
-    case actionTypes.SET_DATA:
+    case actionTypes.SET_WEEKLY_DATA:
       newState.isLoading = false;
-      newState.data = action.data;
+      newState.weekly = action.data;
+
+      return newState;
+
+    case actionTypes.SET_TOP_DATA:
+      newState.isLoading = false;
+      newState.top = action.data;
 
       return newState;
 
