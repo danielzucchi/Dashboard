@@ -7,6 +7,7 @@ const pool = mariadb.createPool({
   user: 'zfn1weoj0qnehqdu',
   password: 'nrnaeryhrcbcqnfo',
   database: 'h9h3kuxcl3j9jcs2',
+  connectionLimit: 5,
 });
 
 router.get('/data/:option', (req, res) => {
