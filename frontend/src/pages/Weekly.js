@@ -17,7 +17,7 @@ const Weekly = ({ dispatch, data }) => {
 
   return (
     <div>
-      <h1>Weekly here</h1>
+      <h1>Weekly Data</h1>
       <WeeklyDataContainer />
     </div>
   );

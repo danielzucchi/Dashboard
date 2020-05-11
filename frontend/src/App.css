@@ -40,3 +40,9 @@ a {
     transform: rotate(360deg);
   }
 }
+
+.container {
+  margin: 0 auto;
+  padding: 0 40px;
+  max-width: 1200px;
+}
