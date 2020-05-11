@@ -21,7 +21,7 @@ const WeeklyData = ({ weekly, isLoading }) => {
   const aisleSeries = weekly.filter(data => data.PRODUCT === 'Aisle');
   const brandSeries = weekly.filter(data => data.PRODUCT === 'Brand');
   const offerSeries = weekly.filter(data => data.PRODUCT === 'Offer');
-  const exposedByProduct = _.chain(weekly)
+  const exposedByWeek = _.chain(weekly)
     .groupBy('WEEK_COMMENCING')
     .toPairs()
     .map(value => ({
@@ -31,7 +31,7 @@ const WeeklyData = ({ weekly, isLoading }) => {
       Offer: value[1][2].EXPOSED,
     }))
     .value();
-  const controlByProduct = _.chain(weekly)
+  const controlByWeek = _.chain(weekly)
     .groupBy('WEEK_COMMENCING')
     .toPairs()
     .map(value => ({
@@ -103,7 +103,7 @@ const WeeklyData = ({ weekly, isLoading }) => {
           consequat eiusmod esse occaecat non labore.
         </p>
         <Paper>
-          <Chart data={exposedByProduct}>
+          <Chart data={exposedByWeek}>
             <ValueScale name="Aisle" />
             <ValueScale name="Brand" />
             <ValueScale name="Offer" />
@@ -140,7 +140,7 @@ const WeeklyData = ({ weekly, isLoading }) => {
           consequat eiusmod esse occaecat non labore.
         </p>
         <Paper>
-          <Chart data={controlByProduct}>
+          <Chart data={controlByWeek}>
             <ValueScale name="Aisle" />
             <ValueScale name="Brand" />
             <ValueScale name="Offer" />
