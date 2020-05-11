@@ -15,7 +15,7 @@ Inside `frontend` folder: run `npm start`.
 
 ### Sequence of data events
 
-React app will start on `localhost:3000`. Pages call the backend endpoint to fetch data from SQL database server. Data is then pushed to Redux store.
+React app will start on `localhost:3000`. Pages call the backend endpoint to fetch data from SQL database server. Data is then pushed to Redux store. Redux store holds both sets of data while app is running.
 
 Components access store via containers. Data is processed, filtered down to dumb components and displayed in charts.
 
