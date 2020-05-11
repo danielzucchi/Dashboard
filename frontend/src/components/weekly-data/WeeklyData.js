@@ -45,7 +45,7 @@ const WeeklyData = ({ weekly, isLoading }) => {
   return (
     <div className="container">
       <div style={{ marginTop: '50px' }}>
-        <h2>Aisle Products</h2>
+        <h2>Aisle Products over Time</h2>
         <p>
           Veniam Lorem elit nulla commodo ea commodo nulla consectetur proident
           ad deserunt. Incididunt ad ex exercitation irure ullamco dolor aliquip
@@ -55,14 +55,24 @@ const WeeklyData = ({ weekly, isLoading }) => {
           <Chart data={aisleSeries}>
             <ArgumentAxis />
             <ValueAxis />
-            <LineSeries valueField="EXPOSED" argumentField="WEEK_COMMENCING" />
-            <LineSeries valueField="CONTROL" argumentField="WEEK_COMMENCING" />
+            <LineSeries
+              valueField="EXPOSED"
+              name="Exposed"
+              argumentField="WEEK_COMMENCING"
+            />
+            <LineSeries
+              valueField="CONTROL"
+              name="Control"
+              argumentField="WEEK_COMMENCING"
+            />
             <Stack />
+            <Legend />
           </Chart>
         </Paper>
       </div>
+
       <div style={{ marginTop: '50px' }}>
-        <h2>Brand Products</h2>
+        <h2>Brand Products Over Time</h2>
         <p>
           Veniam Lorem elit nulla commodo ea commodo nulla consectetur proident
           ad deserunt. Incididunt ad ex exercitation irure ullamco dolor aliquip
@@ -72,14 +82,24 @@ const WeeklyData = ({ weekly, isLoading }) => {
           <Chart data={brandSeries}>
             <ArgumentAxis />
             <ValueAxis />
-            <LineSeries valueField="EXPOSED" argumentField="WEEK_COMMENCING" />
-            <LineSeries valueField="CONTROL" argumentField="WEEK_COMMENCING" />
+            <LineSeries
+              valueField="EXPOSED"
+              name="Exposed"
+              argumentField="WEEK_COMMENCING"
+            />
+            <LineSeries
+              valueField="CONTROL"
+              name="Control"
+              argumentField="WEEK_COMMENCING"
+            />
             <Stack />
+            <Legend />
           </Chart>
         </Paper>
       </div>
+
       <div style={{ marginTop: '50px' }}>
-        <h2>Offer Products</h2>
+        <h2>Offer Products over Time</h2>
         <p>
           Veniam Lorem elit nulla commodo ea commodo nulla consectetur proident
           ad deserunt. Incididunt ad ex exercitation irure ullamco dolor aliquip
@@ -87,16 +107,26 @@ const WeeklyData = ({ weekly, isLoading }) => {
         </p>
         <Paper>
           <Chart data={offerSeries}>
-            <ArgumentAxis labelComponent="Week" />
+            <ArgumentAxis />
             <ValueAxis />
-            <LineSeries valueField="EXPOSED" argumentField="WEEK_COMMENCING" />
-            <LineSeries valueField="CONTROL" argumentField="WEEK_COMMENCING" />
+            <LineSeries
+              valueField="EXPOSED"
+              name="Exposed"
+              argumentField="WEEK_COMMENCING"
+            />
+            <LineSeries
+              valueField="CONTROL"
+              name="Control"
+              argumentField="WEEK_COMMENCING"
+            />
             <Stack />
+            <Legend />
           </Chart>
         </Paper>
       </div>
+
       <div style={{ marginTop: '50px' }}>
-        <h2>Exposed by Products</h2>
+        <h2>Exposed by Products over Time</h2>
         <p>
           Veniam Lorem elit nulla commodo ea commodo nulla consectetur proident
           ad deserunt. Incididunt ad ex exercitation irure ullamco dolor aliquip
@@ -132,8 +162,9 @@ const WeeklyData = ({ weekly, isLoading }) => {
           </Chart>
         </Paper>
       </div>
+
       <div style={{ marginTop: '50px' }}>
-        <h2>Control by Products</h2>
+        <h2>Control by Products over Time</h2>
         <p>
           Veniam Lorem elit nulla commodo ea commodo nulla consectetur proident
           ad deserunt. Incididunt ad ex exercitation irure ullamco dolor aliquip

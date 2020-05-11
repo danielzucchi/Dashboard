@@ -23,7 +23,12 @@ const TopData = ({ top, isLoading }) => {
 
   return (
     <div className="container">
-      <div style={{ display: 'inline-block', textAlign: 'center' }}>
+      <div
+        style={{
+          display: 'flex',
+          textAlign: 'center',
+        }}
+      >
         <div
           style={{
             marginTop: '50px',
@@ -89,7 +94,7 @@ const TopData = ({ top, isLoading }) => {
         </div>
       </div>
 
-      <div style={{ display: 'inline-block', textAlign: 'center' }}>
+      <div style={{ display: 'flex', textAlign: 'center' }}>
         <div
           style={{
             marginTop: '50px',
@@ -155,7 +160,7 @@ const TopData = ({ top, isLoading }) => {
         </div>
       </div>
 
-      <div style={{ display: 'inline-block', textAlign: 'center' }}>
+      <div style={{ display: 'flex', textAlign: 'center' }}>
         <div
           style={{
             marginTop: '50px',
@@ -221,7 +226,7 @@ const TopData = ({ top, isLoading }) => {
         </div>
       </div>
 
-      <div style={{ display: 'inline-block', textAlign: 'center' }}>
+      <div style={{ display: 'flex', textAlign: 'center' }}>
         <div
           style={{
             marginTop: '50px',
