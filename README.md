@@ -10,7 +10,7 @@ React/Redux, Node.js/Express, MariaDB, React-Thunk, material-ui
 
 Run `npm install` inside **both** `backend` and `frontend` folders.
 
-Inside `backend` folder: run `npp run dev`.
+Inside `backend` folder: run `npm run dev`.
 
 Inside `frontend` folder: run `npm start`.
 
