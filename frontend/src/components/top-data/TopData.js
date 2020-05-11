@@ -11,15 +11,16 @@ import {
 } from '@devexpress/dx-react-chart-material-ui';
 import { Stack } from '@devexpress/dx-react-chart';
 
-const TopData = ({ top, isLoading }) => {
+const TopData = ({
+  isLoading,
+  spendSeries,
+  unitsSeries,
+  visitsSeries,
+  totalCustSeries,
+}) => {
   if (isLoading) {
     return <Loading />;
   }
-
-  const spendSeries = top.filter(data => data.METRIC === 'Spend');
-  const unitsSeries = top.filter(data => data.METRIC === 'Units');
-  const visitsSeries = top.filter(data => data.METRIC === 'Visits');
-  const totalCustSeries = top.filter(data => data.METRIC === 'Total_custs');
 
   return (
     <div className="container">
