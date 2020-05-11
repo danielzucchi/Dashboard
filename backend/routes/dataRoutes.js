@@ -21,7 +21,7 @@ router.get('/data/:option', (req, res) => {
         .then(data => res.status(200).json(data))
         .catch(err => console.log(err));
     })
-    .catch(err => err);
+    .catch(err => console.log(err));
 });
 
 module.exports = router;

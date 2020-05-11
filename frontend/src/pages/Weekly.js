@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import fetchData from '../lib/data/fetchData';
 import WeeklyDataContainer from '../components/weekly-data/WeeklyDataContainer';
+import PropTypes from 'prop-types';
 
 const Weekly = ({ dispatch, data }) => {
   const { weekly } = data;
@@ -20,6 +21,13 @@ const Weekly = ({ dispatch, data }) => {
       <WeeklyDataContainer />
     </div>
   );
+};
+
+Weekly.propTypes = {
+  dispatch: PropTypes.func.isRequired,
+  data: PropTypes.shape({
+    weekly: PropTypes.arrayOf(PropTypes.shape({})),
+  }).isRequired,
 };
 
 export default connect(state => state)(Weekly);
